@@ -33,6 +33,7 @@ export function ScheduleForm() {
     })
 
     setCustomer("")
+    setTime("")
   }
 
   return (
@@ -62,6 +63,7 @@ export function ScheduleForm() {
                     label={hour}
                     value={scheduleHour}
                     onChange={(e) => setTime(e.target.value)}
+                    checked={time === scheduleHour}
                     disabled={hourAvailable}
                   />
                 </li>
@@ -80,6 +82,7 @@ export function ScheduleForm() {
                     label={hour}
                     value={scheduleHour}
                     onChange={(e) => setTime(e.target.value)}
+                    checked={time === scheduleHour}              
                     disabled={hourAvailable}
                   />
                 </li>
@@ -98,6 +101,7 @@ export function ScheduleForm() {
                     label={hour}
                     value={scheduleHour}                    
                     onChange={(e) => setTime(e.target.value)}
+                    checked={time === scheduleHour}
                     disabled={hourAvailable}
                   />
                 </li>

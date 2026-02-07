@@ -45,7 +45,7 @@ export function Agenda() {
             periodText="Manhã"
             periodHours="09h-12h"
           >
-            <Schedules schedules={morningSchedules} />
+            <Schedules schedulesData={morningSchedules} />
           </SchedulePeriod>
 
           <SchedulePeriod
@@ -53,7 +53,7 @@ export function Agenda() {
             periodText="Tarde"
             periodHours="13h-18h"
           >
-            <Schedules schedules={afternoonSchedules} />
+            <Schedules schedulesData={afternoonSchedules} />
           </SchedulePeriod>
 
           <SchedulePeriod
@@ -61,7 +61,7 @@ export function Agenda() {
             periodText="Noite"
             periodHours="19h-21h"
           >
-            <Schedules schedules={nightSchedules} />
+            <Schedules schedulesData={nightSchedules} />
           </SchedulePeriod>
         </div>
       </Container>
