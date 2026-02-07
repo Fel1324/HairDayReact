@@ -1,5 +1,7 @@
+import dayjs from "dayjs"
+
 export const OPENING_HOURS = [
-  "09:00",
+  "9:00",
   "10:00",
   "11:00",
   "12:00",
@@ -13,3 +15,5 @@ export const OPENING_HOURS = [
   "20:00",
   "21:00"
 ]
+
+export const TODAY = dayjs(new Date()).format("YYYY-MM-DD")

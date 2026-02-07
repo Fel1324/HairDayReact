@@ -1,6 +1,7 @@
-import logo from "./assets/images/logo.svg"
 import { Agenda } from "./components/core/agenda";
 import { ScheduleSidebar } from "./components/core/schedule-sidebar";
+
+import logo from "./assets/images/logo.svg"
 
 export function App() {
   return (

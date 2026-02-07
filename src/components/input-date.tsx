@@ -2,6 +2,8 @@ import { Icon } from "./icon";
 import { textVariants } from "./text";
 import { cva, cx, type VariantProps } from "class-variance-authority";
 
+import { TODAY } from "../utils/opening-hours";
+
 export const inputDateWrapperVariants = cva(
   `
   flex items-center gap-2 border
@@ -73,6 +75,7 @@ export function InputDate({
   icon,
   ...props
 }: InputTextProps) {
+
   return (
     <div className={inputDateWrapperVariants({ size, className })}>
       {icon && <Icon svg={icon} className={inputDateIconVariants({variant, size})} />}
@@ -83,7 +86,8 @@ export function InputDate({
         className={cx(
           inputDateVariants({ size, disabled }),
           textVariants()
-        )}        
+        )}
+        min={TODAY}
         {...props}
       />
     </div>
