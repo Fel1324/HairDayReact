@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useScheduleHours } from "../../hooks/useScheduleHours";
 import { useScheduleForm } from "../../hooks/useScheduleForm";
 
@@ -19,6 +19,7 @@ export function ScheduleForm() {
   const [date, setDate] = useState(TODAY)
   const [time, setTime] = useState("")
   const [customer, setCustomer] = useState("")
+  const [isDisabled, setIsDisabled] = useState(true);
 
   const { createSchedule, schedules } = useScheduleForm()
   const { opening } = useScheduleHours(date, schedules)
@@ -35,6 +36,14 @@ export function ScheduleForm() {
     setCustomer("")
     setTime("")
   }
+
+  useEffect(() => {
+    if(date && time && customer) {
+      setIsDisabled(false);
+    } else {
+      setIsDisabled(true);
+    }
+  }, [date, time, customer])
 
   return (
     <form onSubmit={handleCreateSchedule}>
@@ -116,7 +125,7 @@ export function ScheduleForm() {
         </div>
       </div>
 
-      <Button className="w-full">Agendar</Button>
+      <Button className="w-full" disabled={isDisabled}>Agendar</Button>
     </form>
   )
 }
