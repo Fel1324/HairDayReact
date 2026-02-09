@@ -1,73 +1,84 @@
-# React + TypeScript + Vite
+![HairDay Logo](./src/assets/images/logo.svg)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Uma plataforma de administrador para agendamento de cortes de cabelo.
 
-Currently, two official plugins are available:
+![preview](.github/preview.png)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+> Formação React: Criando primeiro projeto com tooling (Desafio prático).
 
-## React Compiler
+<br>
 
-The React Compiler is currently not compatible with SWC. See [this issue](https://github.com/vitejs/vite-plugin-react/issues/428) for tracking the progress.
+## 📋 Descrição
 
-## Expanding the ESLint configuration
+O HairDay é uma aplicação web que permite agendar horários para cortes de cabelo de forma simples e eficiente.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+<br>
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## ✨ Funcionalidades
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+- **Agendamento de Horários**: Permite selecionar datas e horários disponíveis para agendar cortes de cabelo.
+- **Visualização de Agenda**: Exibe uma agenda com os agendamentos marcados.
+- **Formulário de Agendamento**: Interface intuitiva para inserir nome do cliente e confirmar o agendamento.
+- **Horários de Funcionamento**: Suporte a horários de abertura de 09:00 às 21:00.
+- **Armazenamento Local**: Utiliza localStorage para persistir os agendamentos no navegador.
+- **Design Responsivo**: Interface adaptável para desktop e dispositivos móveis.
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+<br>
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 🛠️ Tecnologias Utilizadas
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+- **Frontend**: React 19 com TypeScript
+- **Build Tool**: Vite
+- **Styling**: Tailwind CSS
+- **Date Handling**: Day.js
+- **Icons**: SVGs com Vite Plugin SVGR
+- **State Management**: Hooks customizados para gerenciamento de estado
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+<br>
+
+## 🚀 Instalação e Execução
+
+### Pré-requisitos
+
+- Node.js (versão 18 ou superior)
+- npm ou yarn
+
+### Passos para Instalação
+
+1. **Clone o repositório**:
+
+   ```bash
+   git clone https://github.com/Fel1324/HairDayReact.git
+   cd HairDayReact
+   ```
+
+2. **Instale as dependências**:
+
+   ```bash
+   npm install
+   ```
+
+3. **Execute o projeto em modo de desenvolvimento**:
+
+   ```bash
+   npm run dev
+   ```
+
+4. **Acesse a aplicação**:
+   Abra o navegador e vá para `http://localhost:5173` (porta padrão do Vite).
+
+<br>
+
+## 👨‍💻 Autor
+
+Desenvolvido por Rafael Roberto de Oliveira.
+
+<br>
+
+## 📄 Licença
+
+Este projeto está licenciado sob a [MIT License](LICENSE).
+
+<br>
+
+Feito com ♥ by Rocketseat :wave: [Participe da nossa comunidade!](https://discord.gg/rocketseat)
