@@ -10,7 +10,7 @@ export function ScheduleSidebar() {
           <Text as="h1" variant={"title-lg"} className="text-gray-100 mb-1">
             Agende um atendimento
           </Text>
-          <Text className="text-gray-300">
+          <Text className="text-gray-300" variant={"text-sm"}>
             Selecione data, horário e informe o nome do cliente para criar o
             agendamento
           </Text>

@@ -27,7 +27,7 @@ export function Schedules({ schedulesData }: ScheduleProps) {
   return (
     <>
       {schedules.length === 0 ? (
-        <Text className="text-gray-300 py-2">
+        <Text className="text-gray-300 py-2" variant={"text-sm"}>
           Você ainda não tem agendamentos cadastrados nesse período.
         </Text>
       ) : (
